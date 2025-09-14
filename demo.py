@@ -15,7 +15,7 @@ print(carrier.name_for_number(spnum,"en"))
 
 from opencage.geocoder import OpenCageGeocode
 
-key = '71febcba40cb41e28399a74dc27c1d1d'
+key = 'your API Key'   # enter your api key opencage 
 
 geocoder=OpenCageGeocode(key)
 
@@ -30,5 +30,6 @@ print(lat,lng)
 
 mymap=folium.Map(location=[lat,lng],zoom_start=9)
 folium.Marker([lat,lng] , popup=location).add_to(mymap)
+
 
 mymap.save("mylocation.html")
